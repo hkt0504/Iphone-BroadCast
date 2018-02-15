@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GoLiveViewController_iPhone">
+            <connections>
+                <outlet property="buttonForFlipCamera" destination="10" id="b4d-0T-O9A"/>
+                <outlet property="buttonForSettings" destination="13" id="Dgz-iO-OEu"/>
+                <outlet property="buttonForSound" destination="12" id="Y61-cT-try"/>
+                <outlet property="buttonForToggleStream" destination="9" id="rPa-R3-oZv"/>
+                <outlet property="buttonForTorch" destination="11" id="kwf-KY-yPe"/>
+                <outlet property="highlightView" destination="ThQ-Dh-mYA" id="TtM-ys-KUv"/>
+                <outlet property="labelForTime" destination="8" id="azG-aO-pZK"/>
+                <outlet property="view" destination="1" id="ZUd-NN-U1g"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view autoresizesSubviews="NO" contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ThQ-Dh-mYA" userLabel="Highlight View" customClass="BroadcastHighlightView">
+                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4">
+                    <rect key="frame" x="612" y="0.0" width="55" height="375"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13">
+                            <rect key="frame" x="0.0" y="0.0" width="55" height="63"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="55" id="v0k-8X-q9z"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                            <state key="normal" title="Settings">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="pushSettings:" destination="-1" eventType="touchUpInside" id="NDw-aA-MVR"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12">
+                            <rect key="frame" x="0.0" y="63" width="55" height="62"/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                            <state key="normal" image="but_unmute.png">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="toggleSound:" destination="-1" eventType="touchUpInside" id="ey9-G7-G0x"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11">
+                            <rect key="frame" x="0.0" y="125" width="55" height="63"/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                            <state key="normal" image="but_tourch.png">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="pushTorch:" destination="-1" eventType="touchUpInside" id="lLJ-EP-vyX"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10">
+                            <rect key="frame" x="0.0" y="188" width="55" height="62"/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                            <state key="normal" image="but_rotatecamera.png">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="pushFlipCamera:" destination="-1" eventType="touchUpInside" id="znq-fh-3eX"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9">
+                            <rect key="frame" x="0.0" y="250" width="55" height="63"/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                            <state key="normal" image="but_golive.png">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="toggleStream:" destination="-1" eventType="touchUpInside" id="SVj-GY-I56"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="8">
+                            <rect key="frame" x="0.0" y="313" width="55" height="62"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="8" firstAttribute="top" secondItem="9" secondAttribute="bottom" id="0UU-WN-u2V"/>
+                        <constraint firstAttribute="trailing" secondItem="10" secondAttribute="trailing" id="44g-fV-1HR"/>
+                        <constraint firstAttribute="trailing" secondItem="8" secondAttribute="trailing" id="5yb-pV-fQn"/>
+                        <constraint firstAttribute="trailing" secondItem="12" secondAttribute="trailing" id="6MQ-WU-SXN"/>
+                        <constraint firstItem="10" firstAttribute="height" secondItem="13" secondAttribute="height" id="7av-uv-o41"/>
+                        <constraint firstItem="13" firstAttribute="leading" secondItem="4" secondAttribute="leading" id="9A1-RS-fL3"/>
+                        <constraint firstItem="8" firstAttribute="leading" secondItem="4" secondAttribute="leading" id="Crh-02-pn8"/>
+                        <constraint firstItem="11" firstAttribute="height" secondItem="13" secondAttribute="height" id="HJg-ML-2wn"/>
+                        <constraint firstItem="10" firstAttribute="leading" secondItem="4" secondAttribute="leading" id="OnF-us-Kr7"/>
+                        <constraint firstItem="9" firstAttribute="top" secondItem="10" secondAttribute="bottom" id="Q2i-Pr-Ozb"/>
+                        <constraint firstAttribute="width" constant="55" id="Qqn-IR-qsF"/>
+                        <constraint firstItem="9" firstAttribute="height" secondItem="13" secondAttribute="height" id="T7a-gr-x8R"/>
+                        <constraint firstItem="8" firstAttribute="height" secondItem="13" secondAttribute="height" id="TZL-Hd-I6t"/>
+                        <constraint firstItem="12" firstAttribute="height" secondItem="13" secondAttribute="height" id="UJc-gb-RSy"/>
+                        <constraint firstItem="12" firstAttribute="top" secondItem="13" secondAttribute="bottom" id="WQP-ak-8yL"/>
+                        <constraint firstItem="13" firstAttribute="top" secondItem="4" secondAttribute="top" id="a9n-5a-GWl"/>
+                        <constraint firstAttribute="trailing" secondItem="9" secondAttribute="trailing" id="c2y-dh-rVZ"/>
+                        <constraint firstAttribute="bottom" secondItem="8" secondAttribute="bottom" id="cVh-N9-il4"/>
+                        <constraint firstItem="11" firstAttribute="leading" secondItem="4" secondAttribute="leading" id="cax-cd-elE"/>
+                        <constraint firstItem="11" firstAttribute="top" secondItem="12" secondAttribute="bottom" id="in1-Od-JwW"/>
+                        <constraint firstAttribute="trailing" secondItem="13" secondAttribute="trailing" id="mke-Z3-CPc"/>
+                        <constraint firstAttribute="trailing" secondItem="11" secondAttribute="trailing" id="p6o-Qt-BRO"/>
+                        <constraint firstItem="9" firstAttribute="leading" secondItem="4" secondAttribute="leading" id="rbE-jb-F2E"/>
+                        <constraint firstItem="12" firstAttribute="leading" secondItem="4" secondAttribute="leading" id="u3v-Vh-F45"/>
+                        <constraint firstItem="10" firstAttribute="top" secondItem="11" secondAttribute="bottom" id="y5L-fl-HDG"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ThQ-Dh-mYA" secondAttribute="trailing" id="2hE-X1-tC1"/>
+                <constraint firstAttribute="bottom" secondItem="ThQ-Dh-mYA" secondAttribute="bottom" id="7GA-Fq-iK6"/>
+                <constraint firstItem="4" firstAttribute="top" secondItem="1" secondAttribute="top" id="KkQ-9H-VUQ"/>
+                <constraint firstItem="ThQ-Dh-mYA" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Mli-zt-o17"/>
+                <constraint firstAttribute="trailing" secondItem="4" secondAttribute="trailing" id="aOg-W3-Csk"/>
+                <constraint firstAttribute="bottom" secondItem="4" secondAttribute="bottom" id="kDc-eU-94b"/>
+                <constraint firstItem="ThQ-Dh-mYA" firstAttribute="top" secondItem="1" secondAttribute="top" id="nbI-4y-1RO"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="but_golive.png" width="100" height="100"/>
+        <image name="but_rotatecamera.png" width="100" height="100"/>
+        <image name="but_tourch.png" width="100" height="100"/>
+        <image name="but_unmute.png" width="100" height="100"/>
+    </resources>
+</document>
